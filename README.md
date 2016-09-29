@@ -63,6 +63,7 @@ All recipes are simple wrappers around the lightweight resources and providers (
 | api_url | The API url for netuitive. | 'https://api.app.netuitive.com/ingest/infrastructure' |
 | conf_path | The path to your Netuitive agent config file. | '/opt/netuitive-agent/conf/netuitive-agent.conf' |
 | cookbook_template | Specifies a different cookbook that the template can come from. | 'netuitive' |
+| docker_collector_enabled | Whether or not to enable the Docker collector. May be `true` or `false`. | false |
 | relations | An array of relations. | [] |
 | source | The name of the template. | 'netuitive-agent.conf.erb' |
 | statsd_enabled | Whether to enable embedded statsd server. | 'False' |

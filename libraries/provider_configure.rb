@@ -13,6 +13,7 @@ class NetuitiveCookbook::NetuitiveConfigureProvider < Chef::Provider::LWRPBase
       variables(
         api_key: new_resource.api_key,
         api_url: new_resource.api_url,
+        docker_collector_enabled: new_resource.docker_collector_enabled,
         statsd_enabled: new_resource.statsd_enabled,
         tags: new_resource.tags,
         relations: new_resource.relations

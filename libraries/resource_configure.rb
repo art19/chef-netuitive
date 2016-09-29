@@ -9,6 +9,8 @@ class NetuitiveCookbook::NetuitiveConfigureResource < Chef::Resource::LWRPBase
   attribute(:api_url, kind_of: String, default: 'https://api.app.netuitive.com/ingest/infrastructure')
   attribute(:conf_path, kind_of: String, default: '/opt/netuitive-agent/conf/netuitive-agent.conf')
   attribute(:cookbook_template, kind_of: String, default: 'netuitive')
+  attribute(:docker_collector_enabled, kind_of: [TrueClass, FalseClass], default: false)
+
   # an array of relations
   attribute(:relations, kind_of: Array, default: [])
   attribute(:source, kind_of: String, default: 'netuitive-agent.conf.erb')

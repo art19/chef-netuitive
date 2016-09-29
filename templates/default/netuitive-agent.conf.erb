@@ -169,7 +169,7 @@ enabled = True
 metrics_whitelist = (?:^.*\.rx_byte$|^.*\.rx_errors$|^.*\.rx_packets$|^.*\.tx_byte$|^.*\.tx_errors$|^.*\.tx_packets$)
 
 [[NetuitiveDockerCollector]]
-enabled = False
+enabled = <%= @docker_collector_enabled ? 'True' : 'False' %>
 
 
 ################################################################################
