@@ -53,7 +53,7 @@ class NetuitiveCookbook::NetuitiveRepoProvider < Chef::Provider::LWRPBase
           action :install
         end
       else
-        Chef.log.warn 'Warning: We are not going to version lock unless you allow EPEL repos'
+        Chef::Log.warn 'Warning: We are not going to version lock unless you allow EPEL repos'
       end
       # add the repo
       yum_repository 'netuitive' do
