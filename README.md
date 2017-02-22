@@ -3,7 +3,7 @@ Netuitive Cookbook (Chef)
 
 [![Build Status](https://travis-ci.org/Netuitive/chef-netuitive.svg?branch=master)](https://travis-ci.org/Netuitive/chef-netuitive) [![Join the chat at https://gitter.im/Netuitive/chef-netuitive](https://badges.gitter.im/Netuitive/chef-netuitive.svg)](https://gitter.im/Netuitive/chef-netuitive?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Netuitive/chef-netuitive/master/LICENSE)
 
-A cookbook to automate the installataion and configuration of the Netuitive Linux agent. For more
+A cookbook to automate the installation and configuration of the Netuitive Linux agent. For more
 information on the Netuitive Linux Agent, see the [help docs](https://help.netuitive.com/Content/Misc/Datasources/Netuitive/new_netuitive_datasource.htm) or contact Netuitive support at [support@netuitive.com](mailto:support@netuitive.com).
 
 This cookbook is meant to be consumed by wrapper cookbooks such as this: [wrapper cookbook](https://github.com/CloudCruiser/ops_chef-cc_netuitive)
