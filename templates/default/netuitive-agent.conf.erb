@@ -153,7 +153,7 @@ simple = True
 
 [[DiskUsageCollector]]
 enabled = True
-metrics_whitelist = (?:^.*\.io$|^.*\.average_queue_length$|^.*\.await$|^.*\.iops$|^.*\.read_await$|^.*\.reads$|^.*\.util_percentage|^.*\.write_await$|^.*\.writes$)
+metrics_whitelist = <%= @disk_usage_collector_metrics_whitelist %>
 
 [[LoadAverageCollector]]
 enabled = True
