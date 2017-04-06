@@ -2,6 +2,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+- added `statsd_forward`, `statsd_forward_ip`, `statsd_forward_port`, `statsd_listen_ip`, and `statsd_listen_port` options to `netuitive_configure` @ziggythehamster
 
 # 0.14.0
 - added `disk_usage_collector_metrics_whitelist` @ziggythehamster
