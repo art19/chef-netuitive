@@ -82,7 +82,7 @@ trim_backlog_multiplier = 4
 
 # local statsd server
 [[[statsd]]]
-enabled = <% @statsd_enabled %>
+enabled = <%= @statsd_enabled %>
 listen_port = <%= @statsd_listen_port %>
 listen_ip = <%= @statsd_listen_ip %>
 forward_ip = <%= @statsd_forward_ip %>
