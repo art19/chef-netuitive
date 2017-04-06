@@ -82,12 +82,12 @@ trim_backlog_multiplier = 4
 
 # local statsd server
 [[[statsd]]]
-enabled = <%= @statsd_enabled %>
-# listen_port = 8125
-# listen_ip = 127.0.0.1
-# forward_ip = 127.0.0.1
-# forward_port = 9125
-# forward = False
+enabled = <% @statsd_enabled %>
+listen_port = <%= @statsd_listen_port %>
+listen_ip = <%= @statsd_listen_ip %>
+forward_ip = <%= @statsd_forward_ip %>
+forward_port = <%= @statsd_forward_port %>
+forward = <% if @statsd_forward %>True<% else %>False<% end %>
 
 ################################################################################
 ### Options for collectors

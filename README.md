@@ -67,7 +67,12 @@ All recipes are simple wrappers around the lightweight resources and providers (
 | docker_collector_enabled | Whether or not to enable the Docker collector. May be `true` or `false`. | `false` |
 | relations | An array of relations. | `[]` |
 | source | The name of the template. | `'netuitive-agent.conf.erb'` |
-| statsd_enabled | Whether to enable embedded statsd server. | `'False'` |
+| statsd_enabled | Whether to enable embedded statsd server. Specify the string `'True'` or `'False'` | `'False'` |
+| statsd_forward | Whether or not to forward stats from the embedded statsd server. May be `true` or `false` | `false`
+| statsd_forward_ip | The IP to forward statsd data to if forwarding is enabled. | `'127.0.0.1'`
+| statsd_forward_port | The port to forward statsd data to if forwarding is enabled. | `9125`
+| statsd_listen_ip | The interface to listen on if statsd is enabled. | `'127.0.0.1'`
+| statsd_listen_port | The port the embedded statsd listens on | `8125` |
 | tags | An array of tags . | `[]` |
 
 #### netuitive_collector

@@ -15,7 +15,15 @@ class NetuitiveCookbook::NetuitiveConfigureResource < Chef::Resource::LWRPBase
   # an array of relations
   attribute(:relations, kind_of: Array, default: [])
   attribute(:source, kind_of: String, default: 'netuitive-agent.conf.erb')
+
+  # statsd attributes
   attribute(:statsd_enabled, kind_of: String, default: 'False')
+  attribute(:statsd_forward, kind_of: [TrueClass, FalseClass], default: false)
+  attribute(:statsd_forward_ip, kind_of: String, default: '127.0.0.1')
+  attribute(:statsd_forward_port, kind_of: Integer, default: 9125)
+  attribute(:statsd_listen_ip, kind_of: String, default: '127.0.0.1')
+  attribute(:statsd_listen_port, kind_of: Integer, default: 8125)
+
   # the array needs to be a list of strings with 'tagName:tagVal'
   attribute(:tags, kind_of: Array, default: [])
 end

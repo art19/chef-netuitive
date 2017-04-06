@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - added `disk_usage_collector_metrics_whitelist` @ziggythehamster
 - improved README.md @ziggythehamster
 
+# 0.14.0
+- added `disk_usage_collector_metrics_whitelist` @ziggythehamster
+- improved README.md @ziggythehamster
+
 ## 0.13.0
 - fix typos in tags and relations @ziggythehamster
 - fix typo with logger repo provider @ziggythehamster
