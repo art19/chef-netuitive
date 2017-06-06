@@ -3,6 +3,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+# 0.17.0
+- bump default collector agent version @Creator
+
 # 0.16.0
 - added support for Ubuntu 16.04 LTS and made it an an officially supported platforms
 - updating gem dependencies
