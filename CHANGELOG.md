@@ -2,7 +2,9 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-- changed to use chef-client 12.16 
+
+# 0.17.1
+- changed to use chef-client 12.16
 - fixed issue with apt repository creation per #49. @Createor
 
 # 0.17.0
