@@ -3,6 +3,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+# 0.18.0
+- added travis deploys to supermarket @TheConnMan
+
 # 0.17.1
 - changed to use chef-client 12.16
 - fixed issue with apt repository creation per #49. @Createor
