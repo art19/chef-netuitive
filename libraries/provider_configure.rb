@@ -21,6 +21,7 @@ class NetuitiveCookbook::NetuitiveConfigureProvider < Chef::Provider::LWRPBase
         statsd_forward_port: new_resource.statsd_forward_port,
         statsd_listen_ip: new_resource.statsd_listen_ip,
         statsd_listen_port: new_resource.statsd_listen_port,
+        statsd_prefix: new_resource.statsd_prefix,
         tags: new_resource.tags,
         relations: new_resource.relations
       )

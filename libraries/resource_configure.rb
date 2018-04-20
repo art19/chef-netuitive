@@ -23,6 +23,7 @@ class NetuitiveCookbook::NetuitiveConfigureResource < Chef::Resource::LWRPBase
   attribute(:statsd_forward_port, kind_of: Integer, default: 9125)
   attribute(:statsd_listen_ip, kind_of: String, default: '127.0.0.1')
   attribute(:statsd_listen_port, kind_of: Integer, default: 8125)
+  attribute(:statsd_prefix, kind_of: String, default: 'statsd')
 
   # the array needs to be a list of strings with 'tagName:tagVal'
   attribute(:tags, kind_of: Array, default: [])
