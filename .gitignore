@@ -24,3 +24,5 @@ graph.png
 # vim
 *.sw[a-z]
 
+# test-kitchen
+.kitchen.list.yml

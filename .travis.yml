@@ -1,17 +1,26 @@
+sudo: required
+
+services: docker
+
 language: ruby
 rvm:
-  - 2.1
+  - 2.2.5
 
-env:
-  global:
-  - PATH="/opt/chefdk/bin:/opt/chef/bin:/opt/chef/embedded/bin:/opt/chefdk/embedded/bin:$PATH"
-
+# env:
+#   matrix:
+#     - INSTANCE=netuitive-centos-6
 # install:
 #   - sudo apt-get update -q
 #   - sudo apt-get install -q virtualbox --fix-missing
 #   - sudo wget -nv https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
 #   - sudo dpkg -i vagrant_1.8.1_x86_64.deb
 #   - bundle install
+
+before_script:
+ - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
+
+before_install:
+ - openssl aes-256-cbc -K $encrypted_af4147ce6d9c_key -iv $encrypted_af4147ce6d9c_iv -in .travis/client.pem -out client.pem -d
 
 install: bundle --jobs=3 --retry=3
 cache:
@@ -26,3 +35,11 @@ addons:
     - chefdk
 
 script: make travisci
+
+deploy:
+  provider: chef-supermarket
+  user_id: metricly
+  client-key: client.pem
+  cookbook_category: Others
+  on:
+    tags: true

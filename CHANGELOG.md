@@ -4,6 +4,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 - fix my template error that resulted in `statsd_enabled` not working @ziggythehamster
 
+# 0.18.0
+- added travis deploys to supermarket @TheConnMan
+
+# 0.17.1
+- changed to use chef-client 12.16
+- fixed issue with apt repository creation per #49. @Createor
+
+# 0.17.0
+- bump default collector agent version @Createor
+
+# 0.16.0
+- added support for Ubuntu 16.04 LTS and made it an an officially supported platforms
+- updating gem dependencies
+- removed ruby 2.1 support
+- removed chef 11 testing as its support exists in its own branch and I would not expect any more work done on it.
+- setup travis to run kitchen tests for centos-6 and centos-7 (more to come later)
+
+# 0.15.1
+- fixes template issues when using statsd that were caused in #46. @ziggythehamster
+
 # 0.15.0
 - added `statsd_forward`, `statsd_forward_ip`, `statsd_forward_port`, `statsd_listen_ip`, and `statsd_listen_port` options to `netuitive_configure` @ziggythehamster
 

@@ -24,7 +24,16 @@ Supported Platforms
 ### Operating Systems
 
 #### Official
-Debian 8, Ubuntu 14.04 LTS, CentOS 6.5, and CentOS 7. Automated testing will be performed to ensure coverage of these platforms.
+Supported and tested locally with vagrant:
+- Ubuntu 16.04 LTS
+- Ubuntu 14.04 LTS
+- CentOS 6.7+
+- Centos 7.2+
+- Debian 8
+
+Tested platforms by travisci:
+- centos 6
+- centos 7
 
 #### Unofficial
 We will attempt to support as many linux distributions as possible and are hoping to expand the above list over time. Any EPEL based system that still supports yum will likely work and we are open to PRs to expands functionality.
