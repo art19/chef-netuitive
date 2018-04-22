@@ -88,6 +88,7 @@ listen_ip = <%= @statsd_listen_ip %>
 forward_ip = <%= @statsd_forward_ip %>
 forward_port = <%= @statsd_forward_port %>
 forward = <% if @statsd_forward %>True<% else %>False<% end %>
+prefix = <%= @statsd_prefix %>
 
 ################################################################################
 ### Options for collectors

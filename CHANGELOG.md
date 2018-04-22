@@ -2,6 +2,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+- added `statsd_prefix` option to `netuitive_configure`
 
 # 0.18.0
 - added travis deploys to supermarket @TheConnMan

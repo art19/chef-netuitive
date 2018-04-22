@@ -82,6 +82,7 @@ All recipes are simple wrappers around the lightweight resources and providers (
 | statsd_forward_port | The port to forward statsd data to if forwarding is enabled. | `9125`
 | statsd_listen_ip | The interface to listen on if statsd is enabled. | `'127.0.0.1'`
 | statsd_listen_port | The port the embedded statsd listens on | `8125` |
+| statsd_prefix | Prefix applied to your statsd metrics | `statsd` |
 | tags | An array of tags . | `[]` |
 
 #### netuitive_collector
