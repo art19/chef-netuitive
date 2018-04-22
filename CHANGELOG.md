@@ -2,6 +2,8 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+# 0.19.0
 - added `statsd_prefix` option to `netuitive_configure`
 
 # 0.18.0
