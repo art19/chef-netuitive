@@ -148,8 +148,7 @@ include_cpu_pct = True
 
 [[DiskSpaceCollector]]
 enabled = True
-# exclude everything that begins /boot or /mnt
-exclude_filters = ^/boot, ^/mnt
+exclude_filters = <%= @disk_space_collector_exclude_filters %>
 simple = True
 
 [[DiskUsageCollector]]
