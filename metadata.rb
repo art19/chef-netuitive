@@ -6,8 +6,9 @@ description      'Installs/Configures netuitive'
 long_description 'Installs/Configures netuitive'
 version          '0.19.0'
 
-depends 'apt'
 depends 'yum'
+
+chef_version '>= 13.3'
 
 %w(ubuntu debian centos redhat).each do |os|
   supports os
