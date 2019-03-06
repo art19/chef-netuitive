@@ -4,11 +4,14 @@ services: docker
 
 language: ruby
 rvm:
-  - 2.2.5
+  - 2.4.3
 
-# env:
-#   matrix:
-#     - INSTANCE=netuitive-centos-6
+env:
+  matrix:
+    - INSTANCE=netuitive-centos-6
+    - INSTANCE=netuitive-centos-7
+    - INSTANCE=netuitive-ubuntu-1604
+    - INSTANCE=netuitive-ubuntu-1804
 # install:
 #   - sudo apt-get update -q
 #   - sudo apt-get install -q virtualbox --fix-missing
@@ -20,21 +23,21 @@ before_script:
  - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
 
 before_install:
- - openssl aes-256-cbc -K $encrypted_af4147ce6d9c_key -iv $encrypted_af4147ce6d9c_iv -in .travis/client.pem -out client.pem -d
+ - openssl aes-256-cbc -K $encrypted_af4147ce6d9c_key -iv $encrypted_af4147ce6d9c_iv -in .travis/client.pem -out client.pem -d || true # true to prevent it from failing on forked PRs
 
 install: bundle --jobs=3 --retry=3
 cache:
   directories:
   - vendor/bundle
 
-addons:
-  apt:
-    sources:
-    - chef-stable-precise
-    packages:
-    - chefdk
+# addons:
+#   apt:
+#     sources:
+#     - chef-stable-precise
+#     packages:
+#     - chefdk
 
-script: make travisci
+script: INSTANCE=$INSTANCE make travisci
 
 deploy:
   provider: chef-supermarket

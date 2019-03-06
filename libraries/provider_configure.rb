@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class NetuitiveCookbook::NetuitiveConfigureProvider < Chef::Provider::LWRPBase
   include NetuitiveCookbook::Helpers
   provides :netuitive_configure
@@ -13,6 +15,7 @@ class NetuitiveCookbook::NetuitiveConfigureProvider < Chef::Provider::LWRPBase
       variables(
         api_key: new_resource.api_key,
         api_url: new_resource.api_url,
+        disk_space_collector_exclude_filters: new_resource.disk_space_collector_exclude_filters,
         disk_usage_collector_metrics_whitelist: new_resource.disk_usage_collector_metrics_whitelist,
         docker_collector_enabled: new_resource.docker_collector_enabled,
         statsd_enabled: new_resource.statsd_enabled,
