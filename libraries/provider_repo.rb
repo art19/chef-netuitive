@@ -41,7 +41,7 @@ class NetuitiveCookbook::NetuitiveRepoProvider < Chef::Provider::LWRPBase
         pin 'version ' + new_resource.version
         pin_priority new_resource.repo_priority_pins['debian']
       end
-    when 'rhel', 'fedora'
+    when 'rhel', 'fedora', 'amazon'
       Chef::Log.warn 'EPEL based system support is still in the works, please submit an issue on github for any issues you have'
       # we can only use yum-plugin-versionlock if we enable epel repos
       if new_resource.use_epel_repos
