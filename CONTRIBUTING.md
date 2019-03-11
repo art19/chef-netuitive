@@ -74,7 +74,7 @@ Releasing
 ### What we do now
 1. Ensure that version has been bumped with semantic versioning (see Makefile)
 
-1. Ensure that the CHNAGELOG has been updated
+1. Ensure that the CHANGELOG has been updated
 
 1. Create a git tag for the version (see Makefile)
 
