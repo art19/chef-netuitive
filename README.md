@@ -70,6 +70,7 @@ All recipes are simple wrappers around the lightweight resources and providers (
 |:------:|-------------|-------------|
 | api_key | Your datasource's API key. | `'CHANGE_ME_PLZ'` |
 | api_url | The API url for netuitive. | `'https://api.app.netuitive.com/ingest/infrastructure'` |
+| batch_size | Number of samples to store before sending to Metricly | `500` |
 | conf_path | The path to your Netuitive agent config file. | `'/opt/netuitive-agent/conf/netuitive-agent.conf'` |
 | cookbook_template | Specifies a different cookbook that the template can come from. | `'netuitive'` |
 | disk_space_collector_exclude_filters | Specifies an exclude filter for metrics | `^/boot, ^/mnt` |
