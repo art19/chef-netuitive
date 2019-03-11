@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 # 0.19.0
 - added `statsd_prefix` option to `netuitive_configure`
 
+# 0.20.0
+- added `disk_space_collector_exclude_filters` @johvet
+
 # 0.19.0
 - added `statsd_prefix` option to `netuitive_configure`
 

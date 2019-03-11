@@ -4,6 +4,6 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  netuitive (0.17.0)
+  netuitive (0.19.0)
     yum (>= 0.0.0)
   yum (3.10.0)
