@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class NetuitiveCookbook::NetuitiveRepoProvider < Chef::Provider::LWRPBase
   include NetuitiveCookbook::Helpers
   provides :netuitive_repo
@@ -24,7 +26,6 @@ class NetuitiveCookbook::NetuitiveRepoProvider < Chef::Provider::LWRPBase
 
     case platform
     when 'debian'
-      include_recipe 'apt'
       # add repo and key
       apt_repository 'netuitive' do
         distribution ''

@@ -148,7 +148,11 @@ include_cpu_pct = True
 
 [[DiskSpaceCollector]]
 enabled = True
-exclude_filters = <%= @disk_space_collector_exclude_filters %>
+<% if @disk_space_collector_exclude_filters.is_a?(Array) %>
+exclude_filters = <%= @disk_space_collector_exclude_filters.join(', ').squeeze(' ') %>
+<% else %>
+exclude_filters = <%= @disk_space_collector_exclude_filters.squeeze(' ') %>
+<% end %>
 simple = True
 
 [[DiskUsageCollector]]
