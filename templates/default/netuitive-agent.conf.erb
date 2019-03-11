@@ -72,7 +72,7 @@ relations = <%= @relations.sort.join(', ') %>
 <% end %>
 
 # How many samples to store before sending to Netuitive
-batch = 100
+batch = <%= @batch_size %>
 
 # how many batches to store before trimming
 max_backlog_multiplier = 5
