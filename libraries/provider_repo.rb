@@ -26,7 +26,6 @@ class NetuitiveCookbook::NetuitiveRepoProvider < Chef::Provider::LWRPBase
 
     case platform
     when 'debian'
-      include_recipe 'apt'
       # add repo and key
       apt_repository 'netuitive' do
         distribution ''
