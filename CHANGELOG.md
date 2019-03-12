@@ -3,6 +3,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 0.21.0
 - added `batch_size` @johvet
 
 # 0.20.0
