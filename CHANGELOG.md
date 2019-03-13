@@ -3,6 +3,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 0.21.1
+- properly reflected in metadata the reality regarding licensing and chef_version support (@majormoses)
+
 ## 0.21.0
 - added `batch_size` @johvet
 
