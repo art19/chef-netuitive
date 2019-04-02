@@ -23,7 +23,7 @@ before_script:
 - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
 
 before_install:
-- openssl aes-256-cbc -K $encrypted_af4147ce6d9c_key -iv $encrypted_af4147ce6d9c_iv -in .travis/client.pem -out client.pem -d || true # true to prevent it from failing on forked PRs
+- openssl aes-256-cbc -K $encrypted_af4147ce6d9c_key -iv $encrypted_af4147ce6d9c_iv -in .travis/client.pem.enc -out client.pem -d || true # true to prevent it from failing on forked PRs
 
 install: bundle --jobs=3 --retry=3
 cache:

@@ -12,7 +12,7 @@ chef_version     '>= 12.5' if respond_to?(:chef_version)
 issues_url       'https://github.com/Netuitive/chef-netuitive/issues' if respond_to?(:issues_url)
 source_url       'https://github.com/Netuitive/chef-netuitive' if respond_to?(:source_url)
 
-version          '0.21.4'
+version          '0.21.5'
 
 depends 'apt'
 depends 'yum'
