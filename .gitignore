@@ -14,6 +14,9 @@ client.pem
 # ignore .kitchen files
 .kitchen
 
+# Berks lock
+Berksfile.lock
+
 # Ignore vendored cookbooks
 berks-cookbooks/*
 # Ignore graphs created by `berks viz`
