@@ -3,6 +3,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 0.21.2
+- no-op testing travis supermarket deploys
+
 ## 0.21.1
 - properly reflected in metadata the reality regarding licensing and chef_version support (@majormoses)
 
