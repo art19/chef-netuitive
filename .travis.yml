@@ -44,7 +44,7 @@ deploy:
   edge:
     branch: req-chef-cookbook_uploader
   user_id: metricly
-  client-key: client.pem
+  client-key: .travis/client.pem
   cookbook_name: netuitive
   cookbook_category: Others
   on:
