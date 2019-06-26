@@ -3,6 +3,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+<<<<<<< HEAD
+=======
+## 0.22.0
+- added `docker_collector_metrics_whitelist`
+
+## 0.21.0.2-0.21.6
+- no-op testing travis supermarket deploys
+
+## 0.21.1
+- properly reflected in metadata the reality regarding licensing and chef_version support (@majormoses)
+
+## 0.21.0
+>>>>>>> upstream/master
 - added `batch_size` @johvet
 
 # 0.20.0
