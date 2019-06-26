@@ -70,11 +70,13 @@ All recipes are simple wrappers around the lightweight resources and providers (
 |:------:|-------------|-------------|
 | api_key | Your datasource's API key. | `'CHANGE_ME_PLZ'` |
 | api_url | The API url for netuitive. | `'https://api.app.netuitive.com/ingest/infrastructure'` |
+| batch_size | Number of samples to store before sending to Metricly | `500` |
 | conf_path | The path to your Netuitive agent config file. | `'/opt/netuitive-agent/conf/netuitive-agent.conf'` |
 | cookbook_template | Specifies a different cookbook that the template can come from. | `'netuitive'` |
 | disk_space_collector_exclude_filters | Specifies an exclude filter for metrics | `^/boot, ^/mnt` |
 | disk_usage_collector_metrics_whitelist | Specifies the metrics whitelist for the DiskUsageCollector. You might change this if you wanted to ignore the Docker device mapper metrics. | `'(?:^.*\.io$|^.*\.average_queue_length$|^.*\.await$|^.*\.iops$|^.*\.read_await$|^.*\.reads$|^.*\.util_percentage|^.*\.write_await$|^.*\.writes$)'` |
 | docker_collector_enabled | Whether or not to enable the Docker collector. May be `true` or `false`. | `false` |
+| docker_collector_metrics_whitelist | Specifies the metrics whitelist for the NetuitiveDockerCollector. | `null` |
 | relations | An array of relations. | `[]` |
 | source | The name of the template. | `'netuitive-agent.conf.erb'` |
 | statsd_enabled | Whether to enable embedded statsd server. Specify the string `'True'` or `'False'` | `'False'` |
