@@ -9,11 +9,13 @@ class NetuitiveCookbook::NetuitiveConfigureResource < Chef::Resource::LWRPBase
 
   attribute(:api_key, kind_of: String, default: 'CHANGE_ME_PLZ')
   attribute(:api_url, kind_of: String, default: 'https://api.app.netuitive.com/ingest/infrastructure')
+  attribute(:batch_size, kind_of: Integer, default: 500)
   attribute(:conf_path, kind_of: String, default: '/opt/netuitive-agent/conf/netuitive-agent.conf')
   attribute(:cookbook_template, kind_of: String, default: 'netuitive')
   attribute(:disk_space_collector_exclude_filters, kind_of: [String, Array], default: '^/boot, ^/mnt')
   attribute(:disk_usage_collector_metrics_whitelist, kind_of: String, default: '(?:^.*\.io$|^.*\.average_queue_length$|^.*\.await$|^.*\.iops$|^.*\.read_await$|^.*\.reads$|^.*\.util_percentage|^.*\.write_await$|^.*\.writes$)')
   attribute(:docker_collector_enabled, kind_of: [TrueClass, FalseClass], default: false)
+  attribute(:docker_collector_metrics_whitelist, kind_of: String, default: '.*')
 
   # an array of relations
   attribute(:relations, kind_of: Array, default: [])
