@@ -35,7 +35,7 @@ platforms:
       privileged: true
       pid_one_command: /bin/systemd
       intermediate_instructions: # any tasks before runlist is evaluated and run
-      - RUN apt-get -y update && apt-get install -y net-tools curl apt-transport-https ca-certificates
+      - RUN apt-get -y update && apt-get install -y net-tools curl
       - ENV container docker
       - CMD ['/usr/sbin/init']
   - name: ubuntu-1804
