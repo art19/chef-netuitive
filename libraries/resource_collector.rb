@@ -7,7 +7,7 @@ class NetuitiveCookbook::NetuitiveCollectorResource < Chef::Resource::LWRPBase
   actions :create
   default_action :create
 
-  attribute(:auto_restart_service_on_change, kind_of: [true, false], default: true)
+  attribute(:auto_restart_service_on_change, kind_of: [TrueClass, FalseClass], default: true)
   attribute(:conf_path, kind_of: String, default: '/opt/netuitive-agent/conf/netuitive-agent.conf')
   attribute(:collectors_dir, kind_of: String, default: '/opt/netuitive-agent/conf/collectors')
   attribute(:cookbook_template, kind_of: String, default: 'netuitive')
