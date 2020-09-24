@@ -29,12 +29,17 @@ class NetuitiveCookbook::NetuitiveCollectorProvider < Chef::Provider::LWRPBase
         variables(
           options: options
         )
-        notifies :restart, 'service[netuitive-agent]', :delayed
+
+        if new_resource.auto_restart_service_on_change
+          notifies :restart, 'service[netuitive-agent]', :delayed
+        end
       end
     end
 
-    service 'netuitive-agent' do
-      subscribes :restart, new_resource.conf_path.to_s
+    if new_resource.auto_restart_service_on_change
+      service 'netuitive-agent' do
+        subscribes :restart, new_resource.conf_path.to_s
+      end
     end
   end
 end

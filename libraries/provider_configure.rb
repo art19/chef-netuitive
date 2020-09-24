@@ -30,11 +30,16 @@ class NetuitiveCookbook::NetuitiveConfigureProvider < Chef::Provider::LWRPBase
         tags: new_resource.tags,
         relations: new_resource.relations
       )
-      notifies :restart, 'service[netuitive-agent]'
+
+      if new_resource.auto_restart_service_on_change
+        notifies :restart, 'service[netuitive-agent]'
+      end
     end
 
-    service 'netuitive-agent' do
-      subscribes :restart, new_resource.conf_path.to_s
+    if new_resource.auto_restart_service_on_change
+      service 'netuitive-agent' do
+        subscribes :restart, new_resource.conf_path.to_s
+      end
     end
   end
 end
