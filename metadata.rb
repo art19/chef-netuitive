@@ -16,6 +16,8 @@ version          '1.0.0'
 depends 'apt', '~> 7.0'
 depends 'yum'
 
+chef_version '>= 13.3'
+
 %w[ubuntu debian centos redhat].each do |os|
   supports os
 end

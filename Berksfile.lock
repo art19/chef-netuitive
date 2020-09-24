@@ -1,0 +1,9 @@
+DEPENDENCIES
+  netuitive
+    path: .
+    metadata: true
+
+GRAPH
+  netuitive (0.19.0)
+    yum (>= 0.0.0)
+  yum (3.10.0)
