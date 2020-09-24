@@ -2,7 +2,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-
+- added `auto_restart_service_on_change` option, which defaults to true to keep the existing behavior (@ziggythehamster)
 
 ## 1.0.0
 - document support for long term maintainability (@majormoses)
