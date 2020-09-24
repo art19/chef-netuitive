@@ -88,6 +88,7 @@ All recipes are simple wrappers around the lightweight resources and providers (
 |:------:|-------------|-------------|
 | api_key | Your datasource's API key. | `'CHANGE_ME_PLZ'` |
 | api_url | The API url for netuitive. | `'https://api.app.netuitive.com/ingest/infrastructure'` |
+| auto_restart_service_on_change | Whether or not to restart the Metricly agent when the configuration changes. You might disable this if your wrapper cookbook is executed by a service which the Metricly agent depends on directly or indirectly and restarting the Metricly service would result in a cyclic dependency. | `true` |
 | batch_size | Number of samples to store before sending to Metricly | `500` |
 | conf_path | The path to your Netuitive agent config file. | `'/opt/netuitive-agent/conf/netuitive-agent.conf'` |
 | cookbook_template | Specifies a different cookbook that the template can come from. | `'netuitive'` |
@@ -114,6 +115,7 @@ All recipes are simple wrappers around the lightweight resources and providers (
 ##### Attributes
 | Name | Description | Default |
 |:------:|-------------|-------------|
+| auto_restart_service_on_change | Whether or not to restart the Metricly agent when the configuration changes. You might disable this if your wrapper cookbook is executed by a service which the Metricly agent depends on directly or indirectly and restarting the Metricly service would result in a cyclic dependency. | `true` |
 | conf_path | The path to your Netuitive agent config file. | `'/opt/netuitive-agent/conf/netuitive-agent.conf'` |
 | cookbook_template | Specifies a different cookbook that the template can come from. | `'netuitive'` |
 | collectors_dir | Dir that custom collectors live in. | `'/opt/netuitive-agent/conf/collectors'` |
