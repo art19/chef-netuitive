@@ -3,6 +3,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+
 ## 1.0.0
 - document support for long term maintainability (@majormoses)
 - drop `< 14`chef support (@majormoses)
