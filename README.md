@@ -94,6 +94,7 @@ All recipes are simple wrappers around the lightweight resources and providers (
 | cookbook_template | Specifies a different cookbook that the template can come from. | `'netuitive'` |
 | disk_space_collector_exclude_filters | Specifies an exclude filter for metrics | `^/boot, ^/mnt` |
 | disk_usage_collector_metrics_whitelist | Specifies the metrics whitelist for the DiskUsageCollector. You might change this if you wanted to ignore the Docker device mapper metrics. | `'(?:^.*\.io$|^.*\.average_queue_length$|^.*\.await$|^.*\.iops$|^.*\.read_await$|^.*\.reads$|^.*\.util_percentage|^.*\.write_await$|^.*\.writes$)'` |
+| disk_usage_collector_send_zero | Whether or not to send disk usage metrics when there is very little IO. Disabling this may result in less than 100% metrics collection if an instance sees very little IO. May be `true` or `false` | `true` |
 | docker_collector_enabled | Whether or not to enable the Docker collector. May be `true` or `false`. | `false` |
 | docker_collector_metrics_whitelist | Specifies the metrics whitelist for the NetuitiveDockerCollector. | `.*` |
 | relations | An array of relations. | `[]` |

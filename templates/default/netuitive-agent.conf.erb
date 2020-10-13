@@ -158,6 +158,7 @@ simple = True
 [[DiskUsageCollector]]
 enabled = True
 metrics_whitelist = <%= @disk_usage_collector_metrics_whitelist %>
+send_zero = <%= @disk_usage_collector_send_zero ? 'True' : 'False' %>
 
 [[LoadAverageCollector]]
 enabled = True
